@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\BlockController.cs" />
+    <Compile Include="Controller\CourseController.cs" />
+    <Compile Include="Controller\RoomController.cs" />
+    <Compile Include="Controller\StaffController.cs" />
+    <Compile Include="Controller\StudentController.cs" />
+    <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Model\BlockBuilding.cs" />
+    <Compile Include="Model\Course.cs" />
+    <Compile Include="Model\Room.cs" />
+    <Compile Include="Model\Staff.cs" />
+    <Compile Include="Model\Student.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="View\BlockForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,12 +90,6 @@
     <Compile Include="View\EditCourse.Designer.cs">
       <DependentUpon>EditCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\EditFee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\EditFee.Designer.cs">
-      <DependentUpon>EditFee.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\EditRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,12 +107,6 @@
     </Compile>
     <Compile Include="View\EditStudent.Designer.cs">
       <DependentUpon>EditStudent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\FeeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FeeForm.Designer.cs">
-      <DependentUpon>FeeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
@@ -155,9 +155,6 @@
     <EmbeddedResource Include="View\EditCourse.resx">
       <DependentUpon>EditCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\EditFee.resx">
-      <DependentUpon>EditFee.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\EditRoom.resx">
       <DependentUpon>EditRoom.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,9 +163,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditStudent.resx">
       <DependentUpon>EditStudent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FeeForm.resx">
-      <DependentUpon>FeeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -207,8 +201,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

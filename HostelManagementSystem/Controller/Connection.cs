@@ -4,33 +4,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace HostelManagementSystem
 {
     class Connection
     {
-        private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string username;
-        private string password;
+        
+        private static MySqlConnection databaseConnection = null;
 
-        public Connection() {
-           
-        }
-        private void Initialie()
+        public static MySqlConnection GetConnection()
         {
-
-            server = "localhost";
-            database = "hostelmanagementsystem";
-            username = "root";
-            password = "";
-            string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-        database + ";" + "UID=" + username + ";" + "PASSWORD=" + password + ";";
-
-            connection = new MySqlConnection(connectionString);
-
+            
+            if (databaseConnection == null)
+            {
+                
+                ConnectToDB();
+            }
+            return databaseConnection;
         }
+
+        private static void ConnectToDB()
+        {
+            try
+            {
+                //connection string
+                string mySqlConnectionString = "datasource=localhost;username=root;password=;database=hostelmanagementsystem;SSLmode=none";
+                //getting connection
+                databaseConnection = new MySqlConnection(mySqlConnectionString);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Sorry, unable to connect to database!");
+            }
+        }
+
+
     }
 }

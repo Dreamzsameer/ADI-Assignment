@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HostelManagementSystem.Controller;
+using HostelManagementSystem.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,9 +27,25 @@ namespace HostelManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Dashboard dashboard = new Dashboard();
-            dashboard.Show();
-            this.Hide();
+            string username = txtUsername.Text;
+            string password = txtpassword.Text;
+
+            User user = new User();
+            user.setUsername(username);
+            user.setPassword(password);
+
+            UserController userController = new UserController();
+            bool authenticate = userController.Authenticate(user);
+            if (authenticate == true)
+            {
+
+                Dashboard dashboard = new Dashboard();
+                dashboard.Show();
+                this.Hide();
+            }
+            else {
+                MessageBox.Show("Invalid username and password");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -30,19 +30,20 @@
         {
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox12 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtRoomNumber = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBlock = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtFee = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtNumberOfBeds = new System.Windows.Forms.ComboBox();
+            this.txtStatus = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button2
@@ -65,13 +66,7 @@
             this.button1.TabIndex = 63;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(318, 114);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(335, 20);
-            this.textBox12.TabIndex = 62;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label13
             // 
@@ -83,12 +78,12 @@
             this.label13.TabIndex = 61;
             this.label13.Text = "Number of Beds";
             // 
-            // textBox10
+            // txtDescription
             // 
-            this.textBox10.Location = new System.Drawing.Point(318, 140);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(335, 20);
-            this.textBox10.TabIndex = 60;
+            this.txtDescription.Location = new System.Drawing.Point(318, 140);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(335, 20);
+            this.txtDescription.TabIndex = 60;
             // 
             // label11
             // 
@@ -100,13 +95,6 @@
             this.label11.TabIndex = 59;
             this.label11.Text = "Description";
             // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(318, 166);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(335, 20);
-            this.textBox9.TabIndex = 58;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -117,12 +105,12 @@
             this.label10.TabIndex = 57;
             this.label10.Text = "Status";
             // 
-            // textBox1
+            // txtRoomNumber
             // 
-            this.textBox1.Location = new System.Drawing.Point(318, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(335, 20);
-            this.textBox1.TabIndex = 56;
+            this.txtRoomNumber.Location = new System.Drawing.Point(318, 88);
+            this.txtRoomNumber.Name = "txtRoomNumber";
+            this.txtRoomNumber.Size = new System.Drawing.Size(335, 20);
+            this.txtRoomNumber.TabIndex = 56;
             // 
             // label2
             // 
@@ -144,12 +132,12 @@
             this.label1.TabIndex = 54;
             this.label1.Text = "Add New Room";
             // 
-            // textBox2
+            // txtBlock
             // 
-            this.textBox2.Location = new System.Drawing.Point(318, 192);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(335, 20);
-            this.textBox2.TabIndex = 66;
+            this.txtBlock.Location = new System.Drawing.Point(318, 192);
+            this.txtBlock.Name = "txtBlock";
+            this.txtBlock.Size = new System.Drawing.Size(335, 20);
+            this.txtBlock.TabIndex = 66;
             // 
             // label3
             // 
@@ -161,12 +149,12 @@
             this.label3.TabIndex = 65;
             this.label3.Text = "Block";
             // 
-            // textBox3
+            // txtFee
             // 
-            this.textBox3.Location = new System.Drawing.Point(318, 218);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(335, 20);
-            this.textBox3.TabIndex = 68;
+            this.txtFee.Location = new System.Drawing.Point(318, 218);
+            this.txtFee.Name = "txtFee";
+            this.txtFee.Size = new System.Drawing.Size(335, 20);
+            this.txtFee.TabIndex = 68;
             // 
             // label4
             // 
@@ -178,27 +166,64 @@
             this.label4.TabIndex = 67;
             this.label4.Text = "Fee";
             // 
+            // txtNumberOfBeds
+            // 
+            this.txtNumberOfBeds.FormattingEnabled = true;
+            this.txtNumberOfBeds.Items.AddRange(new object[] {
+            "One Beded",
+            "Two Beded",
+            "Three Beded",
+            "Four Beded"});
+            this.txtNumberOfBeds.Location = new System.Drawing.Point(318, 114);
+            this.txtNumberOfBeds.Name = "txtNumberOfBeds";
+            this.txtNumberOfBeds.Size = new System.Drawing.Size(335, 21);
+            this.txtNumberOfBeds.TabIndex = 69;
+            // 
+            // txtStatus
+            // 
+            this.txtStatus.FormattingEnabled = true;
+            this.txtStatus.Items.AddRange(new object[] {
+            "Full",
+            "Empty"});
+            this.txtStatus.Location = new System.Drawing.Point(318, 165);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(335, 21);
+            this.txtStatus.TabIndex = 70;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(337, 279);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(136, 36);
+            this.button3.TabIndex = 71;
+            this.button3.Text = "Clear";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // RoomForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(735, 330);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.txtStatus);
+            this.Controls.Add(this.txtNumberOfBeds);
+            this.Controls.Add(this.txtFee);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtBlock);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox12);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox9);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtRoomNumber);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "RoomForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RoomForm";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -209,18 +234,19 @@
 
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtRoomNumber;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBlock;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtFee;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox txtNumberOfBeds;
+        private System.Windows.Forms.ComboBox txtStatus;
+        private System.Windows.Forms.Button button3;
     }
 }

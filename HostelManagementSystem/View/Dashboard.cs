@@ -49,11 +49,7 @@ namespace HostelManagementSystem
 
         }
 
-        private void feeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FeeForm fee = new FeeForm();
-            fee.Show();
-        }
+       
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -90,10 +86,13 @@ namespace HostelManagementSystem
             editCourse.Show();
         }
 
-        private void feeToolStripMenuItem1_Click(object sender, EventArgs e)
+       
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EditFee editFee = new EditFee();
-            editFee.Show();
+            Form1 login = new Form1();
+            login.Show();
+            this.Dispose();
         }
     }
 }
